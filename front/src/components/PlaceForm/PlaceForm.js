@@ -41,12 +41,14 @@ class PlaceForm extends Component {
           type="text"
           value={this.state.title}
           changeHandler={this.inputChangeHandler}
+          required
         />
 
         <FormElement
           propertyName="image"
           title="Place image"
           type="file"
+          // value={this.state.image}
           changeHandler={this.fileChangeHandler}
         />
 

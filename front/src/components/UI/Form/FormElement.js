@@ -34,9 +34,10 @@ FormElement.propTypes = {
   type: PropTypes.string.isRequired,
   required: PropTypes.bool,
   placeholder: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   changeHandler: PropTypes.func.isRequired,
-  autoComplete: PropTypes.string
+  autoComplete: PropTypes.string,
+  options: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default FormElement;

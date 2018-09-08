@@ -29,7 +29,7 @@ const createRouter = () => {
       .catch(() => res.sendStatus(500));
   });
 
-  router.post('/', [auth, permit('admin'), upload.single('image')], (req, res) => {
+  router.post('/', [auth, permit('admin', 'user'), upload.single('image')], (req, res) => {
     const placeData = req.body;
 
     if (req.file) {
@@ -46,6 +46,7 @@ const createRouter = () => {
   });
 
   router.get('/:id', (req, res) => {
+    console.log(req.params.id);
     const id = req.params.id;
     db.collection('places')
       .findOne({_id: new ObjectId(req.params.id)})

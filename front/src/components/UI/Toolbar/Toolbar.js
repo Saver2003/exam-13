@@ -8,11 +8,12 @@ const Toolbar = ({user, logout}) => (
   <Navbar>
     <Navbar.Header>
       <Navbar.Brand>
-        <LinkContainer to="/" exact><a>CW Page</a></LinkContainer>
+        <LinkContainer to="/" exact><a>Places</a></LinkContainer>
       </Navbar.Brand>
       <Navbar.Toggle/>
     </Navbar.Header>
     <Navbar.Collapse>
+
 
       {user ? <UserMenu user={user} logout={logout}/> : <AnonymousMenu/>}
     </Navbar.Collapse>

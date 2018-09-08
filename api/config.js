@@ -8,6 +8,10 @@ module.exports = {
   db: {
     url: 'mongodb://localhost:27017',
     name: 'cw-13'
+  },
+  jwt: {
+    secret: 'very secret string',
+    expiresIn: 100
   }
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Panel} from 'react-bootstrap';
+import {Col, Image} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -15,18 +15,16 @@ const PlaceListItem = props => {
   }
 
   return (
-    <Panel>
-      <Panel.Body>
+    <Col xs={6} md={4}>
         <Image
-          style={{width: '100px', marginRight: '10px'}}
+          style={{height: '100px', margin: '0 10px 30px'}}
           src={image}
           thumbnail
         />
-        <Link to={'/places/' + props.id}>
+        <Link to={'/place'}>
           {props.title}
         </Link>
-      </Panel.Body>
-    </Panel>
+    </Col>
   );
 };
 

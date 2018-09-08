@@ -6,21 +6,7 @@ const PlaceSchema = new Schema({
     type: String,
     required: true
   },
-  image: {
-    type: String,
-    required: true
-  },
-  feedback: {
-    type: Schema.Types.ObjectId,
-    ref: 'FeedBack',
-    required: true
-  },
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
-  }
-
+  image: String,
 });
 
 const Place = mongoose.model('Place', PlaceSchema);
