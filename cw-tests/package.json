@@ -1,0 +1,15 @@
+{
+  "name": "cw-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "chimpy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chimpy": "^0.54.0"
+  }
+}
