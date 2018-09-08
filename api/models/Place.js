@@ -11,7 +11,8 @@ const PlaceSchema = new Schema({
     required: true
   },
   feedback: {
-    type: String,
+    type: Schema.Types.ObjectId,
+    ref: 'FeedBack',
     required: true
   },
   user: {

@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 
 const config = require('./config');
 const users = require('./app/users');
+const places = require('./app/places');
+const feedBacks = require('./app/feedBacks');
 
 const app = express();
 
@@ -20,6 +22,8 @@ db.once('open', () => {
   console.log('Mongoose connected!');
 
   app.use('/users', users());
+  app.use('/places', places());
+  app.use('/feedBakcs', feedBacks());
 
   app.listen(port, (error) => {
     if (error) return console.error(`Server error ${error}`);
