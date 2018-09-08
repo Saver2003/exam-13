@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {PageHeader} from 'react-bootstrap';
 
 import {createPlace} from "../../store/actions/places";
+import PlaceForm from "../../components/PlaceForm/PlaceForm";
 
 class NewPlace extends Component {
   createPlace = placeData => {
