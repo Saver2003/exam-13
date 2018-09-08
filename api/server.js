@@ -23,7 +23,7 @@ db.once('open', () => {
 
   app.use('/users', users());
   app.use('/places', places());
-  app.use('/feedBakcs', feedBacks());
+  app.use('/feedBacks', feedBacks());
 
   app.listen(port, (error) => {
     if (error) return console.error(`Server error ${error}`);

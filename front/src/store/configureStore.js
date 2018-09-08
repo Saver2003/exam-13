@@ -4,9 +4,11 @@ import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import createHistory from 'history/createBrowserHistory';
 
 import usersReducer from "./reducers/users";
+import placesReducer from "./reducers/places";
 import {saveState,loadState} from "./localStorage";
 
 const rootReducer = combineReducers({
+  places: placesReducer,
   users: usersReducer,
   routing: routerReducer
 });
